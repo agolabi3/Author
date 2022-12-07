@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
 /* http://meyerweb.com/eric/tools/css/reset/
 v2.0 | 20110126
 License: none (public domain)
@@ -46,3 +48,278 @@ table {
     border-spacing: 0;
 }
 
+/*start Mine*/
+body{
+    max-width: 360px;
+    margin: auto;
+    text-align: center;
+    background-color: #dad3b742;
+}
+
+h1,h2,h3{
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: .5em;
+}
+
+h1{
+    padding-top: 1em;
+}
+
+#events h3{
+text-align: left;
+}
+
+dl, ul, p, label{
+    font-family: 'Comfortaa', cursive;
+}
+
+dl{
+    text-align: left;
+}
+
+dt{
+    font-weight: bold;
+    margin-bottom: .5em;
+    margin-top: .5em;
+}
+
+img {
+    max-width: 80%;
+    display: block;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+header img {
+    margin-top: 2em;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+nav {
+    padding-bottom: 25px;
+    position: relative;
+    z-index: 3;
+}
+
+nav h2{
+    visibility: hidden;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+}
+
+section{
+    margin-bottom: 3em;
+}
+
+.needSpace{
+    margin-top: 10px;
+    margin-bottom: 3em;
+}
+#events h2{
+    padding-top: 8px;
+}
+li p{
+    margin-bottom: .9em;
+}
+
+li h4{
+    margin-bottom: 1.5em;
+}
+
+li h3{
+    font-size: 1.5em;
+}
+
+section h3{
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+button, #mySubmit{
+    margin-top: 1.5em;
+    height: 44px;
+    width: 170px;
+    background-color: #D74452;
+    color: rgb(255, 248, 238);
+    border: none;
+    font-weight: bold;
+    border-radius: .8em;
+}
+
+button:hover, #mySubmit:hover{
+text-decoration: underline;
+background-color: #b43743;
+cursor: pointer;
+}
+
+button{
+    display: block;
+}
+
+input{
+    height: 25px;
+}
+
+.topBottomColor{
+    background-color: #2d838d6e;
+    padding-left: .2em;
+    padding-right: .2em;
+}
+
+.topBottomColor a:hover{
+    padding: 5px 5px 5px 5px;
+    background-color: #2d838d6e
+}
+
+#booksColor{
+    background-color: #db8e364d;
+    padding-left: .2em;
+    padding-right: .2em;
+}
+.bookColor{
+    border-top: 3px solid #DB8E36;
+}
+
+#eventColor{
+    background-color: #db9e344b;
+    padding-left: .2em;
+    padding-right: .2em;
+}
+.eventColor{
+    border-top: 3px solid #DB9F34;
+}
+
+form{
+    display: block;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*footer*/
+footer p{
+    font-family: 'Comfortaa', cursive;
+    text-align: left;
+    margin-bottom: 2em;
+    margin-left: 1em;
+}
+footer h2{
+    text-align: left;
+    margin-left: .5em;
+    padding-top: 1em;
+}
+#footerLinks{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.jumpLinks li{
+    font-family: 'Comfortaa', cursive;
+    margin: .5em 0 .5em 0;
+}
+.jumpLinks{
+    border-bottom: 10px #b43743;
+}
+
+hr{
+    margin-top: 0;
+    border-top: 3px solid #2D838D;
+}
+
+/*medium*/
+@media screen and (min-width: 800px){
+    body{
+        min-width: 800px;
+    }
+
+}
+
+/*large*/
+@media screen and (min-width: 1200px){
+    body{
+        min-width: 1200px;
+    }
+    #mainNavigation{
+        /*display: grid;
+        grid-template-columns: 1fr 0fr ;
+        margin-right: auto;
+        padding-right: 4em;*/
+        display: flex;
+        justify-content: space-between;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+    hr{
+        margin: 0;
+    }
+    #about img{
+        height: 30em;
+    }
+    #books img{
+        height: 15em;
+    }
+    #books li{
+        margin: 0px 18px 0px 18px;
+    }
+    #books ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #events{
+        margin: 0;
+        padding: 0;
+        height: 850px;
+    }
+    #alignItems{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    form{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+    /*#sanDiego{
+        grid-area: sanDiego;
+    }
+    #santaClara{
+        grid-area: santaClara;
+    }
+    #santaBarbara{
+        grid-area: santaBarbara;
+    }
+    #sanFran{
+        grid-area: sanFran;
+    }
+    #alignItems button{
+        grid-area: button;
+    }
+    #alignItems{
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-areas:
+            "sanDiego . button . . santaClara . button"
+            "santaBarbara . button . . sanFran . button";
+        }*/
+}
