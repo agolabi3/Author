@@ -71,8 +71,9 @@ h1{
 text-align: left;
 }
 
-dl, ul, p, label{
+dl, ul, p, label, h4, a, #mySubmit{
     font-family: 'Comfortaa', cursive;
+    line-height: 22px;
 }
 
 dl{
@@ -119,6 +120,12 @@ nav ul{
     display: flex;
     justify-content: space-between;
     align-items: right;
+    padding-left: 20px;
+    padding-right: 20px;
+    list-style: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: .4s ease-out;
 }
 
 nav li a:hover {
@@ -133,18 +140,22 @@ section{
     margin-top: 10px;
     margin-bottom: 3em;
 }
+
 #events h2{
     padding-top: 8px;
 }
-li p{
+
+#theBooks p{
     margin-bottom: .9em;
 }
 
-li h4{
+#theBooks h4{
+    font-weight: bold;
+    margin-top: 10px;
     margin-bottom: 1.5em;
 }
 
-li h3{
+#theBooks h3{
     font-size: 1.5em;
 }
 
@@ -152,8 +163,8 @@ section h3{
     font-size: 1.5em;
     margin-top: 0;
 }
-
-button, #mySubmit{
+/* button*/
+.buttonStyles, #mySubmit{
     margin-top: 1.5em;
     height: 44px;
     width: 170px;
@@ -164,19 +175,16 @@ button, #mySubmit{
     border-radius: .8em;
 }
 
-button:hover, #mySubmit:hover{
+.buttonStyles:hover, #mySubmit:hover{
 text-decoration: underline;
 background-color: #b43743;
 cursor: pointer;
 }
 
-button{
+.buttonStyles{
     display: block;
 }
 
-input{
-    height: 25px;
-}
 
 .topBottomColor{
     background-color: #2d838d6e;
@@ -190,15 +198,26 @@ input{
 }
 
 #booksColor{
+    border-top: 3px solid #DB8E36;
+    border-bottom: 3px solid #DB8E36;
     background-color: #db8e364d;
     padding-left: .2em;
     padding-right: .2em;
+}
+#booksColor{
+    padding-bottom: 10px;
+}
+
+#eventColor p{
+    padding-bottom: 10px;
 }
 .bookColor{
     border-top: 3px solid #DB8E36;
 }
 
 #eventColor{
+    border-top: 3px solid #DB9F34;
+    border-bottom: 3px solid #DB9F34;
     background-color: #db9e344b;
     padding-left: .2em;
     padding-right: .2em;
@@ -206,15 +225,24 @@ input{
 .eventColor{
     border-top: 3px solid #DB9F34;
 }
-
+/* form*/
 form{
     display: block;
     text-align: left;
     margin-left: auto;
     margin-right: auto;
 }
-
+input{
+    height: 25px;
+}
+#alignItems a{
+    padding-top: 18px;
+    padding-bottom: 0;
+}
 /*footer*/
+footer{
+    border-top: 3px solid #2D838D;
+}
 footer p{
     font-family: 'Comfortaa', cursive;
     text-align: left;
@@ -238,24 +266,145 @@ footer h2{
 .jumpLinks{
     border-bottom: 10px #b43743;
 }
-
+#social h3{
+    visibility: hidden;
+}
+#social{
+    text-align: left;
+    margin-left: .5em;
+}
 hr{
     margin-top: 0;
     border-top: 3px solid #2D838D;
 }
 
-/*medium*/
-@media screen and (min-width: 800px){
-    body{
-        min-width: 800px;
-    }
+/*ham nav*/
+nav label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+    
+}
+nav label span {
+    background-color: #191919;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+nav label span:before, nav label span:after {
+    background: #191919;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+nav label span:before {
+    top: 5px;
+}
+nav label span:after {
+    top: -5px;
+}
+nav input {
+    display: none;
+}
+nav input:checked ~ ul {
+    max-height: 500px;
+}
+nav input:checked ~ label span {
+    background: transparent;
+}
+nav input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+nav input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+nav input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
 
+/*medium*/
+@media screen and (min-width: 860px){
+    body{
+        min-width: 860px;
+    }
+nav label, nav span{
+    display: none;
+}
+nav input:not(.steps) ~ ul {
+        
+    max-height: 500px;
+}
+
+    #about img{
+        height: 30em;
+    }
+    #mainNavigation{
+        /*display: grid;
+        grid-template-columns: 1fr 0fr ;
+        margin-right: auto;
+        padding-right: 4em;*/
+        display: flex;
+        justify-content: space-between;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+    #theBooks img{
+        height: 18em;
+    }
+    #theBooks p {
+        margin: 0px 18px 0px 18px;
+    }
+    #theBooks{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+    }
+    #alignItems{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    form div{
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 18px;
+        margin-right: 18px;
+        grid-area: div;
+    }
+    #hm{
+        grid-area: hm;
+    }
+    /*form{
+        display: grid;
+        grid-template-areas: 
+        "div hm";
+        align-items: center;
+    }*/
+    form{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 18px;
+        margin-right: 18px;
+    }
 }
 
 /*large*/
 @media screen and (min-width: 1200px){
     body{
         min-width: 1200px;
+    }
+    nav label, nav span{
+        display: none;
+    }
+    
+    nav input {
+        display: contents;
     }
     #mainNavigation{
         /*display: grid;
@@ -273,13 +422,13 @@ hr{
     #about img{
         height: 30em;
     }
-    #books img{
+    #theBooks img{
         height: 15em;
     }
-    #books li{
+    #theBooks p {
         margin: 0px 18px 0px 18px;
     }
-    #books ul{
+    #theBooks{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -287,7 +436,6 @@ hr{
     #events{
         margin: 0;
         padding: 0;
-        height: 850px;
     }
     #alignItems{
         display: grid;
@@ -300,6 +448,7 @@ hr{
         margin-left: 18px;
         margin-right: 18px;
     }
+
     /*#sanDiego{
         grid-area: sanDiego;
     }

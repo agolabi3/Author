@@ -8,12 +8,16 @@
         <title>Claire Sinagra - Author</title>
     </head>
     <body>
-        
+        <!--start header THIS IS THE INTRO TO THE STORY-->
         <header>
             <div id="mainNavigation" class="topBottomColor">
                 <h1>Claire Sinagra</h1>
                 <nav>
-                    <h2>Main Navigation</h2>
+                    <h2>Main Navigation</h2><!--hide in Css -->
+                    <!--STart NEW-->
+                    <input type="checkbox" id="dropdown"/>
+                    <label for="dropdown"><span></span></label>
+                    <!--end new-->
                     <ul>
                         <li><a href="#about">About</a></li>
                         <li><a href="#books">Books</a></li>
@@ -27,134 +31,155 @@
                 <p>Claire lives in the Rocky Mountains with her husband, an exceptionally perfect dog, and an attack cat.</p>
             </section>
         </header>
-        
+        <!--start main-->
         <main>
-            <section id="books">
-                <div id="booksColor">
-                    <hr class="bookColor">
+            <!--start books-->
+            <section id="books"><!--all sections must have an h friend-->
+                <div class="needSpace" id="booksColor">
+                    
                     <img src="images/hero.jpg" alt="">
                     <h2>Books</h2>
                     <p>Claire's books have received starred reviews in Publishers Weekly, Library Journal, and Booklist. She is a New York Times and a USA Today bestseller and a RITA® winner.</p>
-                    <hr class="needSpace bookColor">
+                    
                 </div>
-                <ul>
-                    <li id="sillySpace">
+                <div id="theBooks">
+                    <section id="sillySpace">
                         <img src="images/Sily-Space.svg" alt="">
                         <h3>Silly Space</h3>                        
                             <p>The planets were circling the Sun, staring into space, until suddenly they spot something else in their Solar System. What could it be? Who could it be? The planets have no idea but they're circling to find out.</p>
                             <h4>2021</h4>
-                    </li>
-                    <li id="prettyPlants">
+                    </section>
+                    <section id="prettyPlants">
                         <img src="images/Pretty-Plants.svg" alt="">
                         <h3>Pretty Plants</h3>                        
                             <p>One tiny dandelion seed wants to hold onto its dandelion home, until the winter wind carries it away. The seed worries it won't be able to find its place in such a vast and frightening world. But everything is much more beautiful than it ever thought, and perhaps finding a new home isn't such a bad thing after all.</p>
                             <h4>2020</h4>
-                    </li>
-                    <li id="happyHello">
+                    </section>
+                    <section id="happyHello">
                         <img src="images/Happy-Hello.svg" alt="">
                         <h3>Happy Hello</h3>                        
                             <p>Is it possible to find happiness in times of chaos and confusion?Yes! It is possible!Use these practices and techniques and find happiness each day. A workbook/activity book full of interactive fun!</p>
                             <h4>2019</h4>
-                    </li>
-                    <li id="freddy">
+                    </section>
+                    <section id="freddy">
                         <img src="images/Freddys-Feelings.svg" alt="">
                         <h3>Freddy's Feelings</h3>                        
                             <p>How to teach kids about emotions and feelings? Like teaching them everything else - using clear words, familiar situations, exciting pictures and a lot of hands-on activities (games, puzzles, coloring pages, etc.).</p> 
                             <h4>2018</h4>
-                    </li>
-                </ul>
+                    </section>
+                </div>
             </section><!--end end Book Section-->
+            <!--start events-->
             <section id="events">
                 <div class="needSpace" id="eventColor">
-                    <hr class="eventColor">
+                    
                     <h2>Events</h2>
                     <p>Get an autographed book at Claire's bookstore events or hear her read her books at library events.</p>
-                    <hr class="eventColor needSpace">
+                    
                 </div>
                 <div id="alignItems">
-                <section id="sanDiego">
-                    <h3>San Diego</h3>
-                    <dl>
-                        <dt>Date</dt>
-                        <dd>Saturday, January 8, 2022</dd>
-                        <dt>Time</dt>
-                        <dd>11:00 AM -- 2:00 PM</dd>
-                        <dt>Address</dt>
-                        <dd>Bob's Bookstore<br>
-                            123 Bob Street<br>
-                            San Diego, CA 89978
-                        </dd>
-                    </dl>
-                    <button>Get Tickets</button><hr class="eventColor needSpace">
-                </section>
-                <section id="santaClara">
-                    <h3>Santa Clara</h3>
-                    <dl>
-                        <dt>Date</dt>
-                        <dd>Saturday, January 15, 2022</dd>
-                        <dt>Time</dt>
-                        <dd>1:00 -- 4:00 PM</dd>
-                        <dt>Address</dt>
-                        <dd>Barnes & Noble<br>
-                            5678 Books Ave.<br>
-                            Santa Clara, CA 89813
-                        </dd>
-                    </dl>
-                    <button>Get Tickets</button><hr class="eventColor needSpace">
-                </section>
-                <section id="santaBarbara">
-                    <h3>Santa Barbara</h3>
-                    <dl>
-                        <dt>Date</dt>
-                        <dd>Saturday, January 21, 2022</dd>
-                        <dt>Time</dt>
-                        <dd>9:00 -- 10:30 AM</dd>
-                        <dt>Address</dt>
-                        <dd>Santa Barbara Library<br>
-                            286 Main Street<br>
-                            Santa Barbara, CA 89173
-                        </dd>
-                    </dl>
-                    <button>Get Tickets</button><hr class="eventColor needSpace">
-                </section>
-                <section id="sanFran">
-                    <h3>San Francisco</h3>
-                    <dl>
-                        <dt>Date</dt>
-                        <dd>Saturday, January 28, 2022</dd>
-                        <dt>Time</dt>
-                        <dd>10:00 -- 11:30 AM</dd>
-                        <dt>Address</dt>
-                        <dd>San Francisco Library<br>
-                            438 Groovy Blvd.<br>
-                            San Francisco, CA 81786
-                        </dd>
-                    </dl>
-                    <button>Get Tickets</button><hr class="eventColor needSpace">
-                </section>
+                    <section id="sanDiego">
+                        <h3>San Diego</h3>
+                        <dl>
+                            <dt>Date</dt>
+                            <dd>Saturday, January 8, 2022</dd>
+                            <dt>Time</dt>
+                            <dd>11:00 AM -- 2:00 PM</dd>
+                            <dt>Address</dt>
+                            <dd>Bob's Bookstore<br>
+                                123 Bob Street<br>
+                                San Diego, CA 89978
+                            </dd>
+                        </dl>
+                        <a class="buttonStyles" href="#">Get Tickets</a><hr class="eventColor needSpace">
+                    </section>
+                    <section id="santaClara">
+                        <h3>Santa Clara</h3>
+                        <dl>
+                            <dt>Date</dt>
+                            <dd>Saturday, January 15, 2022</dd>
+                            <dt>Time</dt>
+                            <dd>1:00 -- 4:00 PM</dd>
+                            <dt>Address</dt>
+                            <dd>Barnes & Noble<br>
+                                5678 Books Ave.<br>
+                                Santa Clara, CA 89813
+                            </dd>
+                        </dl>
+                        <a class="buttonStyles" href="#">Get Tickets</a><hr class="eventColor needSpace">
+                    </section>
+                    <section id="santaBarbara">
+                        <h3>Santa Barbara</h3>
+                        <dl>
+                            <dt>Date</dt>
+                            <dd>Saturday, January 21, 2022</dd>
+                            <dt>Time</dt>
+                            <dd>9:00 -- 10:30 AM</dd>
+                            <dt>Address</dt>
+                            <dd>Santa Barbara Library<br>
+                                286 Main Street<br>
+                                Santa Barbara, CA 89173
+                            </dd>
+                        </dl>
+                        <a class="buttonStyles" href="#">Get Tickets</a><hr class="eventColor needSpace">
+                    </section>
+                    <section id="sanFran">
+                        <h3>San Francisco</h3>
+                        <dl>
+                            <dt>Date</dt>
+                            <dd>Saturday, January 28, 2022</dd>
+                            <dt>Time</dt>
+                            <dd>10:00 -- 11:30 AM</dd>
+                            <dt>Address</dt>
+                            <dd>San Francisco Library<br>
+                                438 Groovy Blvd.<br>
+                                San Francisco, CA 81786
+                            </dd>
+                        </dl>
+                        <a class="buttonStyles" href="#">Get Tickets</a><hr class="eventColor needSpace">
+                    </section>
                 </div>
             </section><!--end Event section-->
 
-            <section>
+            <section id="newsLetter">
                 <h2>Newsletter Sign Up</h2>
                 <form>
-                    <label for="firstName">First Name<span class="required">*</span></label><br>
-                    <input type="text" name="firstName" id="firstName" autocomplete="name" required><br>
-
-                    <label for="lastName">Last Name<span class="required">*</span></label><br>
-                    <input type="text" name="lastName" id="lastName" autocomplete="name" required><br>
-                
+                   
+                        <div>
+                        <label for="firstName">First Name<span class="required">*</span></label><br>
+                        <input type="text" name="firstName" id="firstName" autocomplete="name" required><br></div>
+                        <div id="hm">
+                        <label for="lastName">Last Name<span class="required">*</span></label><br>
+                        <input type="text" name="lastName" id="lastName" autocomplete="name" required><br></div>
+                    <div>
                     <label for="myEmail">Email<span class="required">*</span></label><br>
-                    <input type="text" name="myEmail" id="myEmail" autocomplete="email" required><br>
+                    <input type="text" name="myEmail" id="myEmail" autocomplete="email" required><br></div>
 
                     <input type="submit" name="mySubmit" id="mySubmit">
                 </form>
             </section><!--end Newsletter section-->
-        </main>
+        </main><!--end main-->
+        <!--start footer-->
         <footer class="topBottomColor">
-            <hr>
+            
             <h2>Claire Sinagra, Inc</h2>
             <p><small> All books and events are copyright Claire Sinagra, Inc.</small></p>
+            <section id="social">
+                <h3>Social Media</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <rect x="3" y="5" width="18" height="14" rx="4" />
+                    <path d="M10 9l5 3l-5 3z" />
+                </svg>
+            </section>
             <div id="footerLinks">
                 <section class="jumpLinks">
                     <h3>Books</h3><hr>
@@ -175,7 +200,7 @@
                     </ul>
                 </section>
             </div>
-        </footer>
-    </body>
-</html>
+        </footer><!--end footer-->
+    </body><!--end body-->
+</html><!--end html-->
 
