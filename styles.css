@@ -47,8 +47,9 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+/*END RESET*/
 
-/*start Mine*/
+/*small global*/
 body{
     max-width: 360px;
     margin: auto;
@@ -67,8 +68,9 @@ h1{
     padding-top: 1em;
 }
 
-#events h3{
-text-align: left;
+.needSpace{
+    margin-top: 10px;
+    margin-bottom: 3em;
 }
 
 dl, ul, p, label, h4, a, #mySubmit{
@@ -86,17 +88,15 @@ dt{
     margin-top: .5em;
 }
 
-img {
-    max-width: 80%;
-    display: block;
-    margin: auto;
-    margin-bottom: 1em;
+section{
+    margin-bottom: 3em;
 }
 
-header img {
-    margin-top: 2em;
+section h3{
+    font-size: 1.5em;
+    margin-top: 0;
 }
-
+/*navigation*/
 a{
     text-decoration: none;
     color: black;
@@ -132,37 +132,22 @@ nav li a:hover {
     text-decoration: underline;
 }
 
-section{
-    margin-bottom: 3em;
-}
-
-.needSpace{
-    margin-top: 10px;
-    margin-bottom: 3em;
-}
-
-#events h2{
-    padding-top: 8px;
-}
-
-#theBooks p{
-    margin-bottom: .9em;
-}
-
-#theBooks h4{
-    font-weight: bold;
-    margin-top: 10px;
-    margin-bottom: 1.5em;
-}
-
-#theBooks h3{
-    font-size: 1.5em;
-}
-
-section h3{
-    font-size: 1.5em;
+hr{
     margin-top: 0;
+    border-top: 3px solid #2D838D;
 }
+/*images*/
+img {
+    max-width: 80%;
+    display: block;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+header img {
+    margin-top: 2em;
+}
+
 /* button*/
 .buttonStyles, #mySubmit{
     margin-top: 1.5em;
@@ -183,9 +168,10 @@ cursor: pointer;
 
 .buttonStyles{
     display: block;
+    margin-bottom: 20px;
 }
 
-
+/*header and footer*/
 .topBottomColor{
     background-color: #2d838d6e;
     padding-left: .2em;
@@ -197,22 +183,57 @@ cursor: pointer;
     background-color: #2d838d6e
 }
 
+/*book section*/
 #booksColor{
+    background-image: url("images/hero-small.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 300px;
     border-top: 3px solid #DB8E36;
     border-bottom: 3px solid #DB8E36;
-    background-color: #db8e364d;
+    /*background-color: #db8e364d;*/
     padding-left: .2em;
     padding-right: .2em;
-}
-#booksColor{
     padding-bottom: 10px;
 }
 
+#colorBack{
+    margin-top: 2.8em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    color: rgb(255, 248, 238);
+    background-color: #1919199a;
+    border: 3px solid #DB8E36;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#theBooks p{
+    margin-bottom: .9em;
+}
+
+#theBooks h4{
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 1.5em;
+}
+
+#theBooks h3{
+    font-size: 1.5em;
+}
+
+.bookColor{
+    border-top: 3px solid #DB8E36;
+}
+
+/*event section*/
 #eventColor p{
     padding-bottom: 10px;
 }
-.bookColor{
-    border-top: 3px solid #DB8E36;
+
+#events h3{
+    text-align: left;
 }
 
 #eventColor{
@@ -222,9 +243,15 @@ cursor: pointer;
     padding-left: .2em;
     padding-right: .2em;
 }
+
 .eventColor{
     border-top: 3px solid #DB9F34;
 }
+
+#events h2{
+    padding-top: 8px;
+}
+
 /* form*/
 form{
     display: block;
@@ -239,9 +266,16 @@ input{
     padding-top: 18px;
     padding-bottom: 0;
 }
+
+#alignItems section{
+    border-bottom: 3px solid #DB9F34;
+}
+
 /*footer*/
 footer{
+    display: block;
     border-top: 3px solid #2D838D;
+    padding-bottom: .3em;
 }
 footer p{
     font-family: 'Comfortaa', cursive;
@@ -253,6 +287,9 @@ footer h2{
     text-align: left;
     margin-left: .5em;
     padding-top: 1em;
+}
+footer h3{
+    border-bottom: 3px solid #2D838D;
 }
 #footerLinks{
     display: flex;
@@ -273,10 +310,6 @@ footer h2{
     text-align: left;
     margin-left: .5em;
 }
-hr{
-    margin-top: 0;
-    border-top: 3px solid #2D838D;
-}
 
 /*ham nav*/
 nav label {
@@ -285,7 +318,6 @@ nav label {
     padding: 28px 20px;
     position: relative;
     user-select: none;
-    
 }
 nav label span {
     background-color: #191919;
@@ -330,17 +362,16 @@ nav input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.st
 }
 
 /*medium*/
-@media screen and (min-width: 860px){
+@media screen and (min-width: 690px){
     body{
-        min-width: 860px;
+        min-width: 690px;
     }
-nav label, nav span{
-    display: none;
-}
-nav input:not(.steps) ~ ul {
-        
-    max-height: 500px;
-}
+    nav label, nav span{
+        display: none;
+    }
+    nav input:not(.steps) ~ ul {
+        max-height: 500px;
+    }
 
     #about img{
         height: 30em;
@@ -376,10 +407,19 @@ nav input:not(.steps) ~ ul {
         margin-right: 18px;
         grid-area: div;
     }
-    #hm{
+    .buttonStyles{
+        float: right;
+    }
+    #booksColor{
+        background-image: url("images/hero-medium.jpg");
+    }
+    #colorBack{
+        margin-top: 4em;
+    }
+     /*#hm{
         grid-area: hm;
     }
-    /*form{
+   form{
         display: grid;
         grid-template-areas: 
         "div hm";
@@ -395,9 +435,9 @@ nav input:not(.steps) ~ ul {
 }
 
 /*large*/
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1078px){
     body{
-        min-width: 1200px;
+        min-width: 1078px;
     }
     nav label, nav span{
         display: none;
@@ -448,8 +488,16 @@ nav input:not(.steps) ~ ul {
         margin-left: 18px;
         margin-right: 18px;
     }
-
-    /*#sanDiego{
+    #booksColor{
+        background-image: url("images/hero-large.jpg");
+    }
+    #colorBack{
+        margin-top: 4.8em;
+    }
+    /*
+    FOOTER DOES NOT LOOK RIGHT IN ANY SCREEN.
+    tried to display grid to have content align within fractions that are needed for each portion
+    #sanDiego{
         grid-area: sanDiego;
     }
     #santaClara{
